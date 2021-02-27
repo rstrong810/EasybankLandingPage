@@ -1,0 +1,474 @@
+:root {
+    --primary-dark-blue: hsl(233, 26%, 24%);
+    --primary-lime-green: hsl(136, 65%, 51%);
+    --primary-cyan: hsl(192, 70%, 51%);
+    --neutral-gray: hsl(233, 8%, 62%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    color: var(--primary-dark-blue);
+    font-weight: 400;
+}
+
+p {
+    color: var(--neutral-gray);
+}
+
+body {
+    font-size: 18px;
+    font-family: 'Public Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.inner-container {
+    min-width: 300px;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+/* |||| Layout |||| */
+
+/* || Top Section || */
+nav {
+    position: relative;
+    width: 100%;
+    background: white;
+    min-width: 300px;
+    z-index: 3;
+}
+
+.nav-content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1em 9%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    height: 24px;
+    margin: auto 0;
+}
+
+.nav-links-container {
+    display: none;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-link {
+    padding: 0 1em;
+    align-self: center;
+}
+
+.nav-link a {
+    color: var(--neutral-gray);
+}
+
+.nav-link a:hover {
+    color: var(--primary-dark-blue);
+    border-bottom: 4px solid transparent;
+    border-image: linear-gradient(0.25turn, var(--primary-lime-green), var(--primary-cyan));
+    border-image-slice: 1;
+    width:100%;
+}
+
+.desktop-nav-button {
+    display: none;
+}
+
+.bg-image-mobile {
+    width: 100%;
+    margin-top: -3.5em;
+}
+
+.bg-image-desktop {
+    display: none;
+}
+
+.bg-intro-overlay{
+    display: block;
+    width: 95%;
+    margin: 0 auto;
+    margin-top: -136%;
+}
+
+.intro-call-to-action {
+    width: 90%;
+    text-align: center;
+    margin: 4em auto 8em auto;
+    padding-bottom: 1em;
+    max-width: 560px;
+}
+
+.intro-call-to-action p {
+    margin: 1em 0.1em 3em 0;
+}
+
+.call-to-action-button {
+    background: linear-gradient(to right, var(--primary-lime-green), var(--primary-cyan));
+    padding: 0.8em 2em;
+    border-radius: 50px;
+    color: white;
+    text-decoration: none;
+}
+
+.call-to-action-button:hover {
+    filter: brightness(150%);
+}
+
+/* || Middle Section ||*/
+
+.why-us-content {
+    width: 90%;
+    text-align: center;
+    max-width: 560px;
+    margin: 0 auto 4em auto;
+}
+
+.why-us-content p {
+    margin: 1em 0;
+}
+
+.our-perks-container {
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto;
+    margin-bottom: 7em;
+    text-align: center;
+}
+
+.card {
+    margin: 0 auto;
+    margin-bottom: 3em;
+    max-width: 400px;
+}
+
+.card-icon {
+    margin-bottom: 1em;
+}
+
+.card-heading {
+    margin-bottom: .5em;
+    font-weight: 300;
+}
+
+/* || Bottom Section || */
+
+.articles-container {
+    width: 90%;
+    margin: 0 auto;
+    margin-bottom: 10em;
+}
+
+.articles-container h1 {
+    text-align: center;
+    margin: 0 auto 1em auto;
+}
+
+.article {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-bottom: 4em;
+}
+
+.article-content {
+    width: 90%;
+    margin: 0 auto;
+    margin-left: 1em;
+}
+
+.article-image {
+    width: 100%;
+    margin-bottom: 2em;
+    border-radius: 10px 10px 0 0;
+}
+
+.article-author {
+    margin-bottom: 1em;
+}
+
+.article-p {
+    margin-top: 1em;
+}
+
+/* || Footer Section || */
+
+footer {
+    padding: 2em 0;
+    width: 100%;
+    background: var(--primary-dark-blue);
+    max-width: 1920px;
+    min-width: 300px;
+    margin: 0 auto;
+}
+
+.footer-content-container {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.footer-links ul li {
+    list-style: none;
+    color: white;
+    margin-bottom: 1em;
+}
+
+.footer-links ul li a:hover {
+    color: var(--primary-lime-green);
+}
+
+.footer-links ul li a{
+    color: white;
+    font-weight: 200;
+}
+
+.social-icons-container {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+.social-icon {
+    padding: 0 0.5em;
+    margin: -2.5px 0;
+}
+
+a .social-icon:hover {
+    filter: brightness(0.5) sepia(1) saturate(4602%) hue-rotate(132deg);
+}
+
+.col-3 {
+    margin-bottom: 3em;
+}
+
+.footer-copyright {
+    margin-top: 2em;
+}
+
+/* |||| Animations |||| */
+
+/* || Animations for Desktop View. Keyframes in Media Queries Section || */
+div.slide-right {
+    overflow: hidden;
+    animation: 1.2s slide-right;
+}
+
+img.slide-left {
+    overflow: hidden;
+    animation: slide-left 1.2s;
+}
+
+img.slide-down {
+    overflow: hidden;
+    animation: slide-down 1.2s;
+}
+
+/* |||| Media Queries |||| */
+
+/* || Tablet view for nav beetween 900 and 1300px || */
+@media (min-width: 900px) {
+    /* dont display nav hamburger bar */
+    .hamburger-bar-container {
+        display: none;
+    }
+
+    .nav-links-container {
+        display: inline-flex;
+    }
+
+    .nav-link a {
+       padding: 0.85em .3em; 
+    }
+}
+
+/* || changes above 1310px || */
+@media (min-width: 1310px) {
+
+    /* || Animations for top section || */
+    @keyframes slide-right {
+        from {
+            margin-left: -70%;
+            width: 300%;
+        }
+    
+        to {
+            margin-left: 9%;
+            width: 100%;
+        }
+    }
+    
+    @keyframes slide-left {
+        from {
+            right: -50em;
+        }
+    
+        to {
+            right: -7em;
+        }
+    }
+    
+    @keyframes slide-down {
+        from {
+            top: -55em;
+        }
+    
+        to {
+            top: -10em;
+        }
+    }
+
+    /* || dont display nav hamburger bar || */
+    .hamburger-bar-container {
+        display: none;
+    }
+
+    .nav-links-container {
+        display: flex;
+    }
+
+    .nav-link a {
+        padding: 1.6em .3em;
+    }
+
+    .desktop-nav-button {
+        display: block;
+    }
+
+    /* || top intro section bg-images change || */
+    .bg-intro-overlay {
+        position: absolute;
+        top: -2em;
+        right: -7em;
+        z-index: 2;
+        margin: 0;
+        width: 760px;
+    }
+
+    .bg-image-mobile {
+        display: none;
+    }
+
+    .bg-image-desktop {
+        display: block;
+        position: absolute;
+        top: -10em;
+        right: -26em;
+        z-index: 1;
+    }
+
+    /* || Intro Section || */
+    .intro-call-to-action {
+        max-width: 450px;
+        margin: 10em auto 19em 9%;
+        text-align: left;
+    }
+
+    /* || Middle Section || */
+    .why-us-content {
+        margin-left: 9%;
+        text-align: left;
+    }
+
+    .our-perks-container {
+        margin: 0;
+        margin-left: 9%;
+        margin-bottom: 8em;
+        display: flex;
+        justify-content: space-evenly;
+        justify-content: flex-start;
+        max-width: 87%;
+    }
+
+    .card {
+        margin: 0 2em 3em 0;
+        text-align: left;
+        max-width: 300px;
+    }
+
+    /* || Article Section || */
+    .flex-articles {
+        display: flex;
+        justify-content: space-between;
+        max-width: 1300px;
+    }
+
+    .articles-container {
+        width: 85%;
+        margin: 0 auto 10em 9%;
+    }
+    
+    .articles-container h1 {
+        text-align: left;
+    }
+
+    .article {
+        width: 260px;
+        margin: 0;
+        margin-right: 2em;
+    }
+
+    .article-image {
+        height: 200px;
+    }
+
+    /* || Footer Section || */
+    .footer-content-container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        text-align: left;
+    }
+
+    .footer-logo {
+        margin-bottom: 3em;
+    }
+
+    .footer-links ul li:last-child {
+        margin: 0;
+    }
+
+    .social-icons-container {
+        margin: 0;
+    }
+
+    .col-1 {
+        grid-column: 1;
+        justify-self: flex-start;
+    }
+
+    .col-2 {
+        grid-column: 2;
+        justify-self: flex-start;
+    }
+
+    .col-3 {
+        grid-column: 3;
+        margin: 0;
+        justify-self: flex-start;
+    }
+
+    .col-4 {
+        grid-column: 4;
+        text-align: right;
+    }
+    
+    .footer-copyright {
+        margin-top: 2.2em;
+        margin-bottom: -0.9em;
+    }
+
+}
